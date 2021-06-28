@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+<link rel="stylesheet" href="styles.css">
+<title>Adib Ashraf's Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Adib Ashraf</h1>
+    <p>A simple website.</p>
+</div>
+
+
+
+
+<div class="navbar">
+    <a href="#links" class="center">Links</a>  
+    <a href="https://unsplash.com" class="center">Images</a>
+    <a href="https://www.youtube.com" class="center">YouTube</a>
+    <a href="index.html" class="center">Info</a>
+    <a href="js.html" class="center">JavaScript Functions</a>
+    <a href="ass2.html" class="center">Testing</a>
+</div>
+
+
+
+<div class="row">
+    <div class="column">
+      <div class="card">
+        
+
+        
+
+        <div class="form">
+            <h3>Hero Converter</h3>
+            <label for="convert">Convert: </label>
+            <input type="text" id="numval">
+            <select id="convert" name="lbkg">
+                <option value="lbkg">lb to kg</option>
+                <option value="kglb">kg to lb</option>
+            </select>
+            <button class="convertbutton" onclick="convert()">Go</button>
+                
+            <p id="output"></p>
+        </div>
+
+        
+
+        
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        
+        
+        <div id="magic">
+            <h3>Magic!</h3>
+            <input type="hidden" value="lower" id="case">
+            <textarea rows="21" cols="100" id="textInput"></textarea>
+            <div id="magicButtons">
+                <input type="button" class="magicButton" value="Clear" onclick="clearText()">
+                <input type="button" class="magicButton" value="Capitalize" onclick="capitalize()">
+				<input type="button" class="magicButton" value="Sort" onclick="sort()">
+				<input type="button" class="magicButton" value="Reverse" onclick="reverse()">
+				<input type="button" class="magicButton" value="Strip Blank" onclick="strip()">
+				<input type="button" class="magicButton" value="Add Numbers" onclick="addNumber()">
+				<input type="button" class="magicButton" value="Shuffle" onclick="shuffle()">
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<div class="footer" id="links">
+    <a href="#" class="right">Go up</a>
+    <a href="#" class="left">BRAC University</a>
+    <a href="#" class="left">LinkedIn</a>
+    <a href="#" class="left">YouTube</a>
+    <a href="#" class="left">GitHub</a>    
+</div>
+
+
+<script src="script.js">
+    var date = document.lastModified;
+    document.write("Last Modified: "+date);
+ </script>
+
+
+</body>
+
+</html>

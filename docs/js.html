@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+<link rel="stylesheet" href="styles.css">
+<title>Adib Ashraf's Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Adib Ashraf</h1>
+    <p>A simple website.</p>
+</div>
+
+
+
+
+<div class="navbar">
+    <a href="#links" class="center">Links</a>  
+    <a href="https://unsplash.com" class="center">Images</a>
+    <a href="https://www.youtube.com" class="center">YouTube</a>
+    <a href="index.html" class="center">Info</a>
+    <a href="js.html" class="center">JavaScript Functions</a>
+</div>
+
+
+<div class="row">
+    <div class="column" onclick="openTab('quoteContainer');">
+      <div class="card clickable">
+        <h3>Quote Box</h3>
+      </div>
+    </div>
+    <div class="column" onclick="openTab('heroContainer');" >
+      <div class="card clickable">
+          <h3>Hero Converter</h3>
+      </div>
+    </div>
+    <div class="column" onclick="openTab('numberContainer');">
+        <div class="card clickable">
+          <h3>Number Series</h3>
+        </div>
+    </div>
+    <div class="column" onclick="openTab('magicContainer');">
+        <div class="card clickable">
+          <h3>Magic!</h3>
+        </div>
+    </div>
+</div>
+
+<div id="quoteContainer" class="card container" style="display: none;">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <div>
+        <h3>Quote Box</h3>
+
+        <script>
+            function quoteGenerator() {
+                const quotes = ["Get busy living or get busy dying.", "You only live once, but if you do it right, once is enough.", "Never let the fear of striking out keep you from playing the game.", "In order to write about life first you must live it.", "Turn your wounds into wisdom.", "I like criticism. It makes you strong.", "Keep calm and carry on", "Life is what we make it, always has been, always will be.", "When you cease to dream you cease to live.", "The best way to predict your future is to create it."];
+                var rand = Math.floor(Math.random()*10);
+                return quotes[rand];}
+        </script>
+
+        <p id="quotebox"></p>
+
+        <script>document.getElementById("quotebox").innerHTML=quoteGenerator()</script>
+
+        <button class="button button1" onclick="button1()"></button>
+        <button class="button button2" onclick="button2()"></button>
+        <button class="button button3" onclick="button3()"></button>
+        <button class="button button4" onclick="button4()"></button>
+    </div>
+</div>
+
+<div id="heroContainer" class="card container" style="display: none;">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <div class="form">
+        <h3>Hero Converter</h3>
+        <label for="convert">Convert: </label>
+        <input type="text" id="numval">
+        <select id="convert" name="lbkg">
+            <option value="lbkg">lb to kg</option>
+            <option value="kglb">kg to lb</option>
+        </select>
+        <button class="magicButton" onclick="convert()">Go</button>
+            
+        <p id="output"></p>
+    </div>
+</div>
+
+<div id="numberContainer" class="card container" style="display: none;">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <div id="numberseries">
+        <h3>Number Series</h3>
+        <label for="series">Input Series of Number: </label>
+        <input id="numIn" onkeyup="numberCalculation()">
+        <p id="max"></p>
+        <p id="min"></p>
+        <p id="sum"></p>
+        <p id="average"></p>
+        <p id="reverse"></p>
+    </div>
+</div>
+
+<div id="magicContainer" class="card container" style="display: none;">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <div id="magic">
+        <h3>Magic!</h3>
+        <input type="hidden" value="lower" id="case">
+        <textarea rows="21" cols="100" id="textInput"></textarea>
+        <div id="magicButtons">
+            <input type="button" class="magicButton" value="Clear" onclick="clearText()">
+            <input type="button" class="magicButton" value="Capitalize" onclick="capitalize()">
+            <input type="button" class="magicButton" value="Sort" onclick="sort()">
+            <input type="button" class="magicButton" value="Reverse" onclick="reverse()">
+            <input type="button" class="magicButton" value="Strip Blank" onclick="strip()">
+            <input type="button" class="magicButton" value="Add Numbers" onclick="addNumber()">
+            <input type="button" class="magicButton" value="Shuffle" onclick="shuffle()">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="footer" id="links">
+    <a href="#" class="right">Go up</a>
+    <a href="#" class="left">BRAC University</a>
+    <a href="#" class="left">LinkedIn</a>
+    <a href="#" class="left">YouTube</a>
+    <a href="#" class="left">GitHub</a>    
+</div>
+
+
+<script src="script.js">
+    var date = document.lastModified;
+    document.write("Last Modified: "+date);
+ </script>
+
+
+</body>
+
+</html>
